@@ -35,6 +35,9 @@ section {
 .nav-item {
   margin: 0 0.5rem;
 }
+
+.filter
+
 .img_div2 {
   display: flex;
   align-items: end;
@@ -136,6 +139,37 @@ section {
 .filter-item:hover {
   background: #e2eef3;
 }
+
+.filter-item .nav-link,
+.filter-item .active,
+.filter-item .active:hover,
+.filter-item,
+.filter-item .nav-tabs {
+  border: none;
+  padding: 0;
+}
+
+.filter-item .nav-link,
+.filter-item .nav-link.active {
+  padding: 5%;
+  text-decoration: none;
+}
+/* .filter-item .nav-link.active {
+
+} */
+.filter-item .nav-link:hover,
+.filter-item .nav-link.active:hover
+ {
+  background-color: #e2eef3;
+  /* border-radius: 50%; */
+  text-decoration: none;
+}
+
+.filter-item .nav-tabs {
+  border: none;
+  padding: 0;
+}
+
 .text .link,
 .text .link i {
   text-decoration: none;
