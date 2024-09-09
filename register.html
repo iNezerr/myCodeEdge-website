@@ -1,72 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>myCodeEdge | Tech Education Redefined</title>
-  <!-- Bootstrap CSS link -->
-  <link href="/assets/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./assets/css/main.css" />
-  <!-- Font awesome icons link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - myCodeEdge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h1 {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 50px;
+            line-height: 59px;
+            text-align: center;
+            color: #000;
+        }
+        .form-container p {
+            font-size: 16px;
+            line-height: 18px;
+            text-align: center;
+        }
+        .form-control, .form-select {
+            border: 1px solid #e2e2e2;
+            padding: 10px;
+        }
+        .btn-primary {
+            background-color: #000;
+            border-color: #000;
+        }
+        .btn-primary:hover {
+            background-color: #333;
+            border-color: #333;
+        }
+        .left-column {
+            position: fixed;
+            left: 0;
+            top: 50px;
+            bottom: 0;
+            width: 50%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #e2eef3;
+            padding: 30px;
+            border-radius: 0;
+        }
+        .left-column img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .desktop-only-image {
+            display: block;
+        }
+        .left-column h2 {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 35px;
+            text-align: center;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        .left-column p {
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #333;
+        }
+        .right-column {
+            margin-left: 50%;
+            padding: 80px 30px 30px;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 991px) {
+            .left-column {
+                position: static;
+                width: 100%;
+                border-radius: 10px 10px 0 0;
+                margin-bottom: 20px;
+                padding: 15px;
+            }
+            .desktop-only-image {
+                display: none;
+            }
+            .right-column {
+                margin-left: 0;
+                padding: 80px 15px 30px;
+            }
+            .form-container {
+                border-radius: 10px;
+            }
+        }
+        .top-bar {
+            height: 50px;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .top-bar a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .top-bar a:hover {
+            text-decoration: underline;
+        }
+        .main-content {
+            margin-top: 50px;
+        }
+    </style>
 </head>
-
 <body>
-
-  <!-- Header -->
-  <header class="header">
-    <div class="navbar">
-      <a class="navbar-brand" href="#">YourLogo</a>
-      <nav class="nav-items">
-        <a class="nav-item" href="#">Home</a>
-        <a class="nav-item" href="#">About</a>
-        <a class="nav-item" href="#">Services</a>
-        <a class="nav-item" href="#">Contact</a>
-      </nav>
+    <div class="top-bar">
+        <div class="container text-end">
+            Already registered? <a href="#">Login now</a>
+        </div>
     </div>
-  </header>
 
-  <!-- Registration Form Section -->
-  <section class="info">
-    <div class="info-container">
-      <h1 class="title">Register Now</h1>
-      <form class="register-form">
-        <div class="form-group">
-          <label for="username" class="label">Username</label>
-          <input type="text" id="username" class="input-field" placeholder="Enter your username" required>
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-lg-6 left-column">
+                <img src="https://via.placeholder.com/400x300" alt="myCodeEdge" class="desktop-only-image">
+                <h2>Join myCodeEdge</h2>
+                <p>Embark on a journey to become a world-class software engineer. Learn, grow, and connect with like-minded individuals in our vibrant community.</p>
+            </div>
+            <div class="col-lg-6 right-column">
+                <div class="form-container">
+                    <h1 class="mb-4">Signup</h1>
+                    <p class="mb-4">Take the next steps to apply at myCodeEdge</p>
+
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="First Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Last Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" required>
+                                <option value="" selected disabled>Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <input type="date" class="form-control" placeholder="Date of Birth" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="Phone Number" required>
+                        </div>
+                        <div class="mb-3">
+                            <select id="country-select" class="form-select" required>
+                                <option value="" selected disabled>Select your country</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="State/City of Residence" required>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" required>
+                                <option value="" selected disabled>How did you hear about us?</option>
+                                <option value="search_engine">Search Engine (Google, Bing, etc.)</option>
+                                <option value="social_media">Social Media (Facebook, Twitter, Instagram, LinkedIn)</option>
+                                <option value="friend_referral">Friend or Colleague Referral</option>
+                                <option value="online_ad">Online Advertisement</option>
+                                <option value="blog_article">Blog or Article</option>
+                                <option value="youtube">YouTube</option>
+                                <option value="podcast">Podcast</option>
+                                <option value="email_marketing">Email Newsletter</option>
+                                <option value="event">Event or Conference</option>
+                                <option value="job_board">Job Board</option>
+                                <option value="educational_institution">Educational Institution</option>
+                                <option value="employer">Employer</option>
+                                <option value="coding_platform">Coding Platform (e.g., GitHub, Stack Overflow)</option>
+                                <option value="tech_news">Tech News Website</option>
+                                <option value="app_store">App Store</option>
+                                <option value="billboard">Billboard or Outdoor Advertising</option>
+                                <option value="radio">Radio</option>
+                                <option value="tv">Television</option>
+                                <option value="print_media">Print Media (Newspaper, Magazine)</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="Confirm Password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="terms" required>
+                            <label class="form-check-label" for="terms">By clicking continue, I agree to Terms of Use and acknowledge that I have read the Privacy Policy.</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </form>
+
+                    <p class="mt-3">Already a myCodeEdge member? <a href="#">Sign In!</a></p>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-          <label for="email" class="label">Email</label>
-          <input type="email" id="email" class="input-field" placeholder="Enter your email" required>
-        </div>
-        <div class="form-group">
-          <label for="password" class="label">Password</label>
-          <input type="password" id="password" class="input-field" placeholder="Enter your password" required>
-        </div>
-        <div class="form-group">
-          <label for="confirm-password" class="label">Confirm Password</label>
-          <input type="password" id="confirm-password" class="input-field" placeholder="Confirm your password" required>
-        </div>
-        <button type="submit" class="submit-btn">Register</button>
-      </form>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="content">
-      <p>© 2024 Your Company. All Rights Reserved.</p>
-      <ul class="footer-links">
-        <li class="list-item_foo"><a href="#">Privacy Policy</a></li>
-        <li class="list-item_foo"><a href="#">Terms of Service</a></li>
-        <li class="list-item_foo"><a href="#">Contact Us</a></li>
-      </ul>
-    </div>
-  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Array of country names
+        const countries = [
+            "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
+            "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan",
+            "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Côte d'Ivoire", "Cabo Verde",
+            "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo",
+            "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Democratic Republic of the Congo", "Denmark", "Djibouti", "Dominica", "Dominican Republic",
+            "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland",
+            "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea",
+            "Guinea-Bissau", "Guyana", "Haiti", "Holy See", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran",
+            "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati",
+            "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania",
+            "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius",
+            "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia",
+            "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia", "Norway",
+            "Oman", "Pakistan", "Palau", "Palestine State", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland",
+            "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino",
+            "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands",
+            "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland",
+            "Syria", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey",
+            "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu",
+            "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
+        ];
 
+        // Function to populate the country select element
+        function populateCountries() {
+            const selectElement = document.getElementById('country-select');
+            countries.forEach(country => {
+                const option = document.createElement('option');
+                option.value = country.toLowerCase().replace(/ /g, '_');
+                option.textContent = country;
+                selectElement.appendChild(option);
+            });
+        }
+
+        // Call the function when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', populateCountries);
+    </script>
 </body>
-
 </html>

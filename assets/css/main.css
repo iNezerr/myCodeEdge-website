@@ -148,7 +148,18 @@ section {
   border: none;
   padding: 0;
 }
+.logo {
+  background-image: url("../img/myCodeEdge.png");
+  background-color: #000;
+  min-width: 100%;
+  width: 700px !important;
+  border-radius: 2%;
+  border-color: #000;
+  border-width: 1px;
 
+  z-index: 1;
+
+}
 .filter-item .nav-link,
 .filter-item .nav-link.active {
   padding: 5%;
